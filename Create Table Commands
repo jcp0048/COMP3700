@@ -1,0 +1,57 @@
+CREATE TABLE Items (
+  itemNum int,
+  itemName varchar(255),
+  QoH int,
+  PPU float(10,2),
+  providerName varchar(255),
+  providerEmail varchar(255),
+  PRIMARY KEY(itemNum)
+);
+
+ INSERT INTO Items ()
+   VALUES
+   (1, 'Lettuce', 57, 1.50, 'Produce', 'Produce@publix.org'),
+   (2, 'Spinach', 20, 2.50, 'Produce', 'Produce@publix.org'),
+   (3, 'Chicken Breast', 178, 4.99, 'Meat', 'Meat@publix.org'),
+   (4, 'Lean Ground Beef', 587, 5.99, 'Meat', 'Meat@publix.org'),
+   (5, 'Canned Black Beans', 23, 0.59, 'Grocery', 'Grocery@publix.org');    
+
+CREATE TABLE ItemLists (
+  listNum int,
+  itemNum int,
+  itemQuantity int,
+  subTotal float(10,2),
+  PRIMARY KEY(listNum,itemNum),
+  FOREIGN KEY (itemNum) REFERENCES Items(itemNum)
+  );
+  
+  INSERT INTO ItemLists ()
+    VALUES
+    (1, 1, 15, 22.50),
+    (1, 2, 4, 10.00),
+    (2, 1, 1, 1.50),
+    (2, 2, 1, 2.50),
+    (2, 3, 1, 4.99),
+    (2, 4, 1, 5.99),
+    (2, 5, 2, 1.18);
+    
+  
+  CREATE TABLE Orders (
+    orderNum int,
+    total float(20,2),
+    customerName varchar(255),
+    customerNum varchar(255),
+    datePlaced date,
+    dateFilled date,
+    listNum int,
+    PRIMARY KEY (orderNum),
+    FOREIGN KEY (listNum) REFERENCES ItemLists(listNum)
+    );
+    
+    INSERT INTO Orders ()
+      Values
+      (1, 32.50, 'James', '706.331.4127', '2017-09-29', NULL, 1),
+      (2, 78.50, 'Jack', '706.331.4128', '2017-09-17', '2017-09-20', NULL),
+      (3, 16.16, 'John', '706.331.4129', '2017-09-25', NULL, 2),
+      (4, 5.32, 'Josh', '706.331.4130', '2017-09-02', '2017-09-17', NULL),
+      (5, 27.50, 'Jamie', '706.331.4131', '2017-09-18', '2017-09-19', NULL);
