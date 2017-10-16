@@ -1,0 +1,30 @@
+CREATE TABLE Items (
+  itemNum int AUTO_INCREMENT ,
+  itemName varchar(255),
+  QoH int,
+  PPU float(10,2),
+  providerName varchar(255),
+  providerEmail varchar(255),
+  PRIMARY KEY(itemNum)
+  );
+
+CREATE TABLE ItemLists (
+  listNum int,
+  itemNum int,
+  itemQuantity int,
+  subTotal float(10,2),
+  PRIMARY KEY(listNum,itemNum),
+  FOREIGN KEY (itemNum) REFERENCES Items(itemNum)
+  );
+
+CREATE TABLE Orders (
+  orderNum int,
+  total float(20,2),
+  customerName varchar(255),
+  customerNum varchar(255),
+  datePlaced date,
+  dateFilled date,
+  listNum int,
+  PRIMARY KEY (orderNum),
+  FOREIGN KEY (listNum) REFERENCES ItemLists(listNum)
+  );
