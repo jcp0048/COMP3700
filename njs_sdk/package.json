@@ -1,11 +1,11 @@
 {
   "main": "index.html",
-  "name": "CashregisterApp",
-  "description": "demo app of node-webkit",
+  "name": "Store Management System",
+  "description": "Grocery Store management System",
   "version": "0.1.0",
-  "keywords": [ "demo", "node-webkit" ],
+  "keywords": [ "store", "management" ],
   "window": {
-    "title": "node-webkit demo",
+    "title": "Store Management System",
     "icon": "link.png",
     "toolbar": false,
     "frame": true,

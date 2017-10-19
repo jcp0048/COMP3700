@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,38 +15,39 @@
   <title>Store Management System</title>
   <script src="./index.js"></script>
 </head>
-
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="text-center">STORE MANAGEMENT SYSTEM</h1>
+    <div class="row" id="login">
+      <div class="col-md-12" style="text-align: center">
+        <h1>POP'S STORE</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
-        <div class="input-group">
-          <div class="input-group-btn">
-            <button type="button" id="id-button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Action
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" id="order-id-link" onclick="changeWord(Order)" href="#">Order ID</a></br>
-              <a class="dropdown-item" id="cutomer-id-link" onclick="changeWord(Customer)" href="#">Customer ID</a></br>
-              <a class="dropdown-item" id="product-id-link" onclick="changeWord(Product)" href="#">Product ID</a>
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="jumbotron">
+          <h2 class="display-3" style="text-align: center">Login</h2>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="input-group">
+                <span class="input-group-addon" id="userid">USER ID</span>
+                <input type="text" class="form-control" id="user-id-input" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <span class="input-group-btn">
+                  <button type="button-addon" id="login-button" class="btn btn-primary">Login</button>
+                </span>
+              </div>
             </div>
-            <script>
-              function changeWord(s) {
-                document.getElementById("id-button").innerHTML = s;
-            </script>
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-11">
+                <a href="#">Don't Have Account?</a>
+              </div>
+            </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
         </div>
       </div>
-      <div class="col-md-6">
-      </div>
+      <div class="col-md-4"></div>
     </div>
   </div>
 </body>
-
 </html>
