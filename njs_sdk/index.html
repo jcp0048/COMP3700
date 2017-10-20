@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +16,6 @@
   <title>Store Management System</title>
   <script src="./index.js"></script>
 </head>
-
 <body>
   <div class="container">
     <div class="row">
@@ -30,7 +28,7 @@
         <div class="input-group">
           <div class="input-group-btn">
             <button type="button" id="id-button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Action
+              ID
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" id="order-id-link" onclick="changeWord(Order)" href="#">Order ID</a></br>
@@ -39,7 +37,7 @@
             </div>
             <script>
               function changeWord(s) {
-                document.getElementById("id-button").innerHTML = s;
+                document.getElementById("id-button").firstChild.data = s;
             </script>
           </div>
           <input type="text" class="form-control" aria-label="Text input with dropdown button">
