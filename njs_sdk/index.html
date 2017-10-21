@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,37 +17,149 @@
   <title>Store Management System</title>
   <script src="./index.js"></script>
 </head>
+
 <body>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-center">STORE MANAGEMENT SYSTEM</h1>
+        <h3 class="text-center">
+				Store Management System
+			</h3>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
-        <button type="button" class="btn btn-primary" onclick="createDb()">Primary</button>
-        <div class="input-group">
-          <div class="input-group-btn">
-            <button type="button" id="id-button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              ID
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" id="order-id-link" onclick="changeWord(Order)" href="#">Order ID</a></br>
-              <a class="dropdown-item" id="cutomer-id-link" onclick="changeWord(Customer)" href="#">Customer ID</a></br>
-              <a class="dropdown-item" id="product-id-link" onclick="changeWord(Product)" href="#">Product ID</a>
-            </div>
-            <script>
-              function changeWord(s) {
-                document.getElementById("id-button").firstChild.data = s;
-            </script>
-          </div>
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
-        </div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-lg btn-default btn-block">
+				Add Customer
+			</button>
+        <button type="button" class="btn btn-lg btn-block btn-default">
+				Edit Customer
+			</button>
+        <button type="button" class="btn btn-block btn-lg btn-default">
+				Add Item
+			</button>
+        <button type="button" class="btn btn-lg btn-block btn-default">
+				Edit Item
+			</button>
+        <button type="button" class="btn btn-lg btn-block btn-default">
+				View Item
+			</button>
+        <button type="button" class="btn btn-lg btn-default btn-block">
+				Create Order
+			</button>
+        <button type="button" class="btn btn-lg btn-block btn-default">
+				View Order
+			</button>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-8">
+        <p>
+          Currently Mode: Edit
+        </p>
+        <p class="text-center text-muted lead">
+          -------------Edit Item-------------
+        </p>
+        <div class="col-md-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                Quantity
+              </th>
+              <th>
+                Item Name
+              </th>
+              <th>
+                Item ID
+              </th>
+              <th>
+                Price
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                10
+              </td>
+              <td>
+                Apple
+              </td>
+              <td>
+                01042012
+              </td>
+              <td>
+                $0.98
+              </td>
+            </tr>
+            <tr class="active">
+              <td>
+                5
+              </td>
+              <td>
+                Pears
+              </td>
+              <td>
+                01042052
+              </td>
+              <td>
+                $0.93
+              </td>
+            </tr>
+            <tr class="success">
+              <td>
+                20
+              </td>
+              <td>
+                Watermelon
+              </td>
+              <td>
+                02042512
+              </td>
+              <td>
+                $3.00
+              </td>
+            </tr>
+            <tr class="warning">
+              <td>
+                10
+              </td>
+              <td>
+                Starberry cases
+              </td>
+              <td>
+                03047012
+              </td>
+              <td>
+                $3.25
+              </td>
+            </tr>
+            <tr class="danger">
+              <td>
+                1
+              </td>
+              <td>
+                Orange
+              </td>
+              <td>
+                08043082
+              </td>
+              <td>
+                $.87
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+  </div>
   </div>
 </body>
 
