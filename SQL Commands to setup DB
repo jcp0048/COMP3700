@@ -125,5 +125,5 @@ BEGIN
     UPDATE Orders
     SET total=(total + (SELECT subTotal FROM ItemLists WHERE itemNum = iNum))
     WHERE listNum = lNum;   
-END;
+END; 
 
