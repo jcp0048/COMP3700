@@ -1,4 +1,30 @@
+/*NEW FOR ITERATION 2*/
+
+CREATE TABLE Employees (
+  employeeID int AUTO_INCREMENT ,
+  name varchar(255),
+  jobclass varchar(255),
+  username varchar(255),
+  password varchar(255),
+  PRIMARY KEY(employeeID)
+);
+
+INSERT INTO Employees ()
+   VALUES
+ (1,'Manager','Manager','Manager','')
+ (2,'Employee','Employee','Employee','');
+ 
+ CREATE TABLE transactions(
+   transactionID int AUTO_INCREMENT,
+   itemName varchar(255),
+   quantity int,
+   cost float(10,2),
+   sold date,
+   PRIMARY KEY(transactionID)
+   );
+
 /*Create table commands */
+
 CREATE TABLE Items (
   itemNum int AUTO_INCREMENT ,
   itemName varchar(255),
