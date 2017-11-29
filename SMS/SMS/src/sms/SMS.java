@@ -2,6 +2,7 @@ package sms;
 
 
 import java.sql.*; 
+import javax.swing.JOptionPane;
 
 public class SMS {
     public static void createTables() {
@@ -246,6 +247,9 @@ public class SMS {
         //</editor-fold>
 
         /* Create and display the form */
+        
+        String uname = JOptionPane.showInputDialog("Enter User Name");
+        String pword = JOptionPane.showInputDialog("Enter Password");
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new baseFrame().setVisible(true);

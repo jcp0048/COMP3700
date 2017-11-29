@@ -5,6 +5,7 @@
  */
 package sms;
 
+import static java.lang.System.exit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -60,7 +61,6 @@ public class baseFrame extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         view_sales_report_button = new javax.swing.JButton();
-        edit_associate_button = new javax.swing.JButton();
         add_associate_button = new javax.swing.JButton();
         view_all_associates_button = new javax.swing.JButton();
 
@@ -87,7 +87,7 @@ public class baseFrame extends javax.swing.JFrame {
         );
         dbInternalFrameLayout.setVerticalGroup(
             dbInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
         );
 
         view_all_items_button.setText("View All Items");
@@ -160,14 +160,12 @@ public class baseFrame extends javax.swing.JFrame {
             }
         });
 
-        edit_associate_button.setText("Edit Associate");
-        edit_associate_button.addActionListener(new java.awt.event.ActionListener() {
+        add_associate_button.setText("Add Associate");
+        add_associate_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edit_associate_buttonActionPerformed(evt);
+                add_associate_buttonActionPerformed(evt);
             }
         });
-
-        add_associate_button.setText("Add Associate");
 
         view_all_associates_button.setText("View All Associates");
         view_all_associates_button.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +179,6 @@ public class baseFrame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(add_associate_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(edit_associate_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(view_all_associates_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(create_order_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(add_item_to_order_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -193,13 +190,16 @@ public class baseFrame extends javax.swing.JFrame {
             .addComponent(view_item_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(view_sales_report_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(fill_and_close_order_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,16 +227,14 @@ public class baseFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fill_and_close_order_button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(view_sales_report_button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(view_all_associates_button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(edit_associate_button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(add_associate_button)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -306,7 +304,7 @@ public class baseFrame extends javax.swing.JFrame {
     }
     
     private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
-        // TODO add your handling code here:
+        exit(1);
     }//GEN-LAST:event_logoutButtonActionPerformed
 
     private void fill_and_close_order_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fill_and_close_order_buttonActionPerformed
@@ -348,12 +346,8 @@ public class baseFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_view_all_order_buttonActionPerformed
 
     private void view_sales_report_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_sales_report_buttonActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_view_sales_report_buttonActionPerformed
-
-    private void edit_associate_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edit_associate_buttonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edit_associate_buttonActionPerformed
 
     private void view_all_associates_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_all_associates_buttonActionPerformed
         String sql = "SELECT * FROM EMPLOYEES";
@@ -487,6 +481,12 @@ public class baseFrame extends javax.swing.JFrame {
         } catch (Exception e) {e.printStackTrace();}
     }//GEN-LAST:event_create_order_buttonActionPerformed
 
+    private void add_associate_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_associate_buttonActionPerformed
+        String name = JOptionPane.showInputDialog("Enter  Name");
+        String role = JOptionPane.showInputDialog("Enter Role (Manager/Associate)");
+      
+    }//GEN-LAST:event_add_associate_buttonActionPerformed
+
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add_associate_button;
@@ -495,7 +495,6 @@ public class baseFrame extends javax.swing.JFrame {
     private javax.swing.JButton create_order_button;
     private javax.swing.JInternalFrame dbInternalFrame;
     private javax.swing.JTable dbTable;
-    private javax.swing.JButton edit_associate_button;
     private javax.swing.JButton edit_item_button;
     private javax.swing.JButton fill_and_close_order_button;
     private javax.swing.JLabel jLabel1;
