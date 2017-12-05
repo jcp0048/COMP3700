@@ -10,16 +10,22 @@ function connect_to_db() {
    return db;
 }
 
+function get_items() {
+  var table = db.exec("SELECT * FROM items");
+  console.log(table)
+}
+
 function search_items() {
   var table = db.exec("SELECT * FROM items");
+
 }
 
 function search_users(username) {
   var user = db.exec("SELECT name FROM users");
   var users = user[0].values;
-  // console.log(users)
+  //Returns true if user name is in the multimetional array from the db
+  //db file loks like [[],[],[]] for the user coloumb
   for(var i = 0; i < users.length; i++) {
-    console.log(users[i]);
     if (users[i][0] == username) {
       return true
     }
