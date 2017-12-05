@@ -3,9 +3,6 @@ $(document).ready(function() {
   $("#login-button").click(function(){
     $.get("/database/search_users/" + $("#user-id-input").val(),function(data){alert(data)})
 
-  //
-  
-
   })
 
 

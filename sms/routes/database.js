@@ -12,7 +12,8 @@ function connect_to_db() {
 
 function get_items() {
   var table = db.exec("SELECT * FROM items");
-  console.log(table)
+  var allData = table[0].values;
+  return allData
 }
 
 function search_items() {
@@ -43,8 +44,14 @@ function showOrderId() {
 
 
 db = connect_to_db()
+get_items()
 router.get('/search_users/:username', function(req, res, next) {
 res.send(search_users(req.params.username))
+});
+
+//route for items data
+router.get('/get_items/', function(req, res, next) {
+res.send(get_items())
 });
 
 module.exports = router;
