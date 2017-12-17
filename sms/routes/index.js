@@ -7,8 +7,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/store/:username', function(req, res, next) {
-  if(){
-    res.render('index') 
-  }
+  res.render('index')
 });
 module.exports = router;

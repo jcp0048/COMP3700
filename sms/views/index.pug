@@ -24,25 +24,25 @@
     </div>
     <div class="row">
       <div class="col-md-4">
-        <button type="button" class="btn btn-lg btn-default btn-block">
+        <button type="button" id="add-customer" class="btn btn-lg btn-default btn-block">
           <p>Add Customer</p>
         </button>
-        <button type="button" class="btn btn-lg btn-block btn-default">
+        <button type="button" id="edit-customer"class="btn btn-lg btn-block btn-default">
           <p>Edit Customer</p>
         </button>
-        <button type="button" class="btn btn-block btn-lg btn-default">
+        <button type="button" id="add-item" class="btn btn-block btn-lg btn-default">
           <p>Add Item</p>
         </button>
-        <button type="button" class="btn btn-lg btn-block btn-default">
+        <button type="button" id="edit-item" class="btn btn-lg btn-block btn-default">
           <p>Edit Item</p>
         </button>
-        <button type="button" class="btn btn-lg btn-block btn-default">
+        <button type="button" id="view-item" class="btn btn-lg btn-block btn-default">
           <p>View Item</p>
         </button>
-        <button type="button" class="btn btn-lg btn-default btn-block">
+        <button type="button" id="create-order" class="btn btn-lg btn-default btn-block">
           <p>Create Order</p>
         </button>
-        <button type="button" class="btn btn-lg btn-block btn-default">
+        <button type="button" id="view-order" class="btn btn-lg btn-block btn-default">
           View Order</p>
         </button>
       </div>
@@ -63,15 +63,54 @@
         <table class="table">
           <thead>
             <tr>
+              <th></th>
               <th>Quantity</th>
               <th>Item Name</th>
               <th>Item ID</th>
-              <th>Item Price</th>
+              <th>Price</th>
             </tr>
           </thead>
-          <tbody id="items-table" >
+          <tbody>
+            <tr>
+              <td><input type="radio"/></td>
+              <td>10</td>
+              <td>Apple</td>
+              <td>01042012</td>
+              <td>$0.98</td>
+            </tr>
+            <tr>
+              <td><input type="radio"/></td>
+              <td>5</td>
+              <td>Pears</td>
+              <td>01042052</td>
+              <td>$0.93</td>
+            </tr>
+            <tr>
+              <td><input type="radio"/></td>
+              <td>20</td>
+              <td>Watermelon</td>
+              <td>02042512</td>
+              <td>$3.00</td>
+            </tr>
+            <tr>
+              <td><input type="radio"/></td>
+              <td>10</td>
+              <td>Starberry cases</td>
+              <td>03047012</td>
+              <td>$3.25</td>
+            </tr>
+            <tr>
+              <td><input type="radio"/></td>
+              <td>1</td>
+              <td>Orange</td>
+              <td>08043082</td>
+              <td>$.87</td>
+            </tr>
           </tbody>
         </table>
+        <button type="button" class="btn btn-lg btn-block btn-default">
+          <p>Check Out Order</p>
+        </button>
       </div>
     </div>
   </div>

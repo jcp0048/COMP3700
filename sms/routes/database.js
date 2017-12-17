@@ -5,33 +5,26 @@ var SQL = require('sql.js');
 var fs = require('fs');
 
 function connect_to_db() {
-  databasePath = "./mydb.db"
+  databasePath = "C:/Users/ship1/Github repo/COMP3700/SMS/mydb.db"
    db = new SQL.Database(fs.readFileSync(databasePath));
    return db;
 }
 
-function get_items() {
-  var table = db.exec("SELECT * FROM items");
-  var allData = table[0].values;
-  return allData
-}
-
 function search_items() {
   var table = db.exec("SELECT * FROM items");
-
 }
 
 function search_users(username) {
   var user = db.exec("SELECT name FROM users");
   var users = user[0].values;
-  //Returns true if user name is in the multimetional array from the db
-  //db file loks like [[],[],[]] for the user coloumb
   for(var i = 0; i < users.length; i++) {
     if (users[i][0] == username) {
       return true
     }
+    else{
+      return ("You have entered invalid credentials")
+    }
   }
-  return false
 }
 
 function db_insert(connection) {
@@ -44,14 +37,8 @@ function showOrderId() {
 
 
 db = connect_to_db()
-get_items()
 router.get('/search_users/:username', function(req, res, next) {
 res.send(search_users(req.params.username))
-});
-
-//route for items data
-router.get('/get_items/', function(req, res, next) {
-res.send(get_items())
 });
 
 module.exports = router;

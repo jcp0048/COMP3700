@@ -1,0 +1,10 @@
+POP's Store
+Item			Price
+Apples..................$0.98
+Pears...................$0.93
+Watermelon..............$3.00
+Strawberry Case.........$3.25
+		
+Total...................$8.16
+		
+Thanks for Shopping with us!
